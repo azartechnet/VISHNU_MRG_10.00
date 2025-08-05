@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #222;
+}
+
+.main-flex {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left-col, .center-col {
+    flex: 1 1 0;
+}
+
+.right-col {
+    flex: 2 1 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.services {
+    background: #a2a840;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2em;
+}
+
+.lake-img img,
+.tea-img img,
+.city-img img,
+.dandelion-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 3px;
+}
+
+.lake-img {
+    flex: 1;
+}
+
+.tea-img {
+    height: 100px;
+}
+
+.portfolio {
+    background: #a03e3a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    height: 100px;
+}
+
+.right-col .top-row {
+    display: flex;
+    gap: 10px;
+    height: 100px;
+}
+
+.testimonials {
+    background: #379484;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2em;
+}
+
+.city-img {
+    flex: 1;
+}
+
+.dandelion-img {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dandelion-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right-col .bottom-row {
+    display: flex;
+    gap: 10px;
+    height: 100px;
+}
+
+.about {
+    background: #d4a03a;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2em;
+}
+
+.contact {
+    background: #2174a6;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2em;
+}
