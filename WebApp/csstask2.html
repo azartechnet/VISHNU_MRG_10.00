@@ -1,0 +1,71 @@
+<style>
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box, .image
+{
+    flex: 1 1 33.33%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.service { background-color: #8A9B0F; }
+.testimonials { background-color: #3FB8AF; }
+.about { background-color: #F2B134; }
+.portfolio { background-color: #C0392B; }
+.contact { background-color: #2980B9; }
+
+.img1
+{
+    background-image: url('images/img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* .img2
+{
+ 
+}
+.img3
+{
+
+}
+.img4
+{
+
+} */
+ .image
+ {
+    background-size: cover;
+    background-position: center;
+ }
+</style>
+
+<div class="container">
+   <div class="box service">Services</div>
+   <div class="image img1"></div> <!-- ✅ img1 with actual image -->
+   <div class="box testimonials">Testimonials</div>
+   <div class="image img1"></div> <!-- Optional: reuse same image -->
+   <div class="image img1"></div>
+   <div class="box portfolio">Portfolio</div>
+   <div class="image img1"></div>
+   <div class="box about">About</div>
+   <div class="box contact">Contact</div>
+</div>
