@@ -15,25 +15,15 @@
     padding:10px;
     font-size: 30px;
 }
-/* .item1
+.item1
 {
-    grid-column-start: 1;
-    grid-column-end:3;
-} */
- .item1
- {
-    grid-row-start: 1;
-    grid-row-end:3;
- }
-.item2
-{
-    grid-column-start: 2;
-    grid-column-end:4;
+    /* grid-area: row-start / column-start / row-end / column-end; */
+    grid-area: 1/2/3/2;
 }
 </style>
 <div class="grid-container">
   <div class="item1">1</div>
-  <div class="item2">2</div>
+  <div>2</div>
   <div>3</div>
   <div>4</div>
   <div>5</div>

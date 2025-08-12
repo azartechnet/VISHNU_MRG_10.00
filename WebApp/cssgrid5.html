@@ -1,0 +1,29 @@
+<style>
+.grid-container
+{
+    display: grid;
+    grid-template-areas: 'my1 my1 my1 my1 my1';
+    gap:10px;
+    background-color: dodgerblue;
+    padding: 10px;
+}
+.grid-container>div
+{
+    background-color: aqua;
+    padding:10px;
+    font-size: 30px;
+    text-align: center;
+}
+.item1
+{
+    grid-area: my1;
+}
+</style>
+<div class="grid-container">
+ <div class="item1">1</div>
+ <div>2</div>
+  <div>3</div>
+ <div>4</div>
+  <div>5</div>
+ <div>6</div>
+</div>
