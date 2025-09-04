@@ -168,6 +168,54 @@
         font-weight: bold;
         /* align-self: center; */
     }
+    /*Footer*/
+    footer
+    {
+       background: #222;
+       color:#ddd;
+       padding: 40px 20px;
+       display: flex;
+       justify-content: space-around;
+       flex-wrap: wrap;
+    }
+    footer h4{
+        margin-bottom: 15px;
+        color:#fff;
+    }
+    footer ul
+    {
+        list-style: none;
+    }
+    footer ul li
+    {
+        margin-bottom: 8px;
+    }
+    footer ul li a
+    {
+       text-decoration: none;
+       color:#ddd;
+       font-size: 14px;
+    }
+    footer .subscribe
+    {
+        margin-top: 20px;
+    }
+    footer input
+    {
+        padding: 8px;
+        border-radius: 5px;
+        border:none;
+        margin-right: 5px;
+    }
+    footer button
+    {
+        padding:8px 15px;
+        background-color: #5cb85c;
+        border: none;
+        color:#fff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
     @media (max-width:768px)
     {
       nav
@@ -191,6 +239,11 @@
       .categories-container
       {
         flex-direction: column;
+      }
+      footer
+      {
+        flex-direction: column;
+        text-align: center;
       }
     }
 </style>
@@ -260,4 +313,35 @@
         </div>
     </div>
 </section>
+<!--Footer-->
+<footer>
+    <div>
+        <h4>Shop</h4>
+        <ul>
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+        </ul>
+    </div>
+    <div>
+        <h4>Products</h4>
+        <ul>
+            <li><a href="">link-1</a></li>
+            <li><a href="">link-2</a></li>
+            <li><a href="">link-3</a></li>
+        </ul>
+    </div>
+    <div>
+        <h4>More Information</h4>
+          <ul>
+            <li><a href="">link-1</a></li>
+            <li><a href="">link-2</a></li>
+            <li><a href="">link-3</a></li>
+        </ul>
+        <div class="subscribe">
+           <input type="email" placeholder="Email Address"/>
+           <button>Subscribe</button>
+        </div>
+    </div>
+</footer>
 </body>
