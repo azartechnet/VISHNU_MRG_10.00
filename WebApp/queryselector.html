@@ -1,0 +1,19 @@
+<style>
+    .example
+    {
+        color:blue;
+    }
+</style>
+<body>
+    <div class="example">FirstDiv</div>
+    <div class="example">SecondDiv</div>
+    <script>
+        var f1=document.querySelector('.example')
+        // var f1=document.querySelectorAll('.example')
+        for(var i=0;i<f1.length;i++)
+    {
+console.log("Value is::",f1[i].textContent)
+    }
+        // console.log("Value is::",f1.textContent)
+    </script>
+</body>
