@@ -1,0 +1,21 @@
+<button onclick="saveData()">Save</button>
+<button onclick="showData()">Show</button>
+<button onclick="clearData()">Clear</button>
+
+<p id="result"></p>
+<script>
+    function saveData()
+    {
+        localStorage.setItem("name","azar")
+    }
+    function showData()
+    {
+        let data=localStorage.getItem("name")
+        document.getElementById("result").innerHTML=data;
+    }
+    function clearData()
+    {
+        localStorage.removeItem("name")
+        document.getElementById("result").innerHTML="";
+    }
+</script>
