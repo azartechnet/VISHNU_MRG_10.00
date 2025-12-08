@@ -155,7 +155,7 @@ const r1=ReactDOM.createRoot(document.getElementById('root'))
 r1.render(<Welcome name="azar" age={20}/>)*/
 
 //Component in Component
-function UserInfo(props)
+/*function UserInfo(props)
 {
     return(
         <div>
@@ -174,4 +174,97 @@ function UserProfile()
     )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<UserInfo name="azar" age="20"/>)
+r1.render(<UserInfo name="azar" age="20"/>)*/
+
+//Styling in React
+/*import './index.css';
+function StyledComponent()
+{
+    const headingStyle={
+        color:'blue',
+        textAlign:'center',
+        fontSize:'30px'
+    };
+    return(
+        <div>
+            <h1 style={headingStyle}>This is Styled Component</h1>
+            <p style={{color:'green',fontSize:'20px'}}>This is a paragraph with inline styling</p>
+            <h1>ExternalStylesheet</h1>
+        </div>
+    )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<StyledComponent/>)*/
+
+//constructor using super
+
+/*class Sample extends React.Component
+{
+    constructor()
+    {
+        super();
+        this.state={name:"azar",age:20};
+    }
+    render()
+    {
+        return(
+            <div>
+                <h1>Hello,{this.state.name}</h1>
+                <p>Your age is::{this.state.age}</p>
+            </div>
+        )
+    }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)*/
+
+//constructor using props
+
+/*class Sample extends React.Component
+{
+    constructor(props)
+    {
+        super(props);
+        this.state={name:props.name,age:props.age};
+    }
+    render()
+    {
+        return(
+            <div>
+                <h1>Hello,{this.state.name}</h1>
+                <p>Your age is::{this.state.age}</p>
+            </div>
+        )
+    }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample name="azar" age={20}/>)*/
+
+class Counter extends React.Component
+{
+    constructor(props)
+    {
+        super(props);
+        this.state={count:0};
+    }
+    increment=()=>{
+        this.setState({count:this.state.count+1});
+    }
+    decrement=()=>{
+        this.setState({count:this.state.count-1});
+    }
+    render()
+    {
+        return(
+            <div>
+                <h1>Counter Application</h1>
+                <h2>Count:{this.state.count}</h2>
+                <button onClick={this.increment}>Increment</button>
+                <button onClick={this.decrement}>Decrement</button>
+            </div>
+        )
+    }
+
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)
