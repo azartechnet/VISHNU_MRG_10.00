@@ -240,7 +240,7 @@ r1.render(<Sample/>)*/
 const r1=ReactDOM.createRoot(document.getElementById('root'))
 r1.render(<Sample name="azar" age={20}/>)*/
 
-class Counter extends React.Component
+/*class Counter extends React.Component
 {
     constructor(props)
     {
@@ -267,4 +267,122 @@ class Counter extends React.Component
 
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Counter/>)
+r1.render(<Counter/>)*/
+
+//React Event
+
+/*function Football()
+{
+    const shoot=()=>{
+        alert("Goal!!!")
+    }
+    return(
+        <div>
+            <h1>Football Game</h1>
+            <button onClick={shoot}>Shoot</button>
+        </div>
+    )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football/>)*/
+
+//Argument passing in Event Handler
+/*function Football()
+{
+    const shoot=(a)=>{
+        alert(a)
+    }
+    return(
+        <div>
+            <h1>Football Game</h1>
+            <button onClick={()=>shoot("azar!!!")}>Shoot</button>
+        </div>
+    )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football/>)*/
+
+//Event Binding in Class Component
+
+/*class Football extends React.Component
+{
+    shoot=a=>{
+        alert(a)
+    }
+    render()
+    {
+        return(
+            <div>
+                <h1>Football Game</h1>
+                <button onClick={()=>this.shoot("azar!!!")}>Shoot</button>
+            </div>
+        )
+    }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football/>)*/
+
+/*function MissedGoal()
+{
+    return<h1>Missed Goal!!!</h1>
+}
+function MadeGoal()
+{
+    return<h1>Goal!!!</h1>
+}
+function Football(props)
+{
+    const isGoal=props.isGoal;
+    return(
+        <div>
+            <h1>Football Game</h1>
+            {isGoal ? <MadeGoal/> : <MissedGoal/>}
+            
+        </div>
+    )
+}   
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football isGoal={Math.random()>0.5}/>)*/
+
+
+/*function MissedGoal()
+{
+    return<h1>Missed Goal!!!</h1>
+}
+function MadeGoal()
+{
+    return<h1>Goal!!!</h1>
+}
+function Football(props)
+{
+    const isGoal=props.isGoal;
+    if(isGoal)
+    {
+        return<MadeGoal/>;
+    }
+    else
+    {
+        return<MissedGoal/>;
+    }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football isGoal={Math.random()>0.5}/>)*/
+
+//using class
+class Football extends React.Component
+{
+    render()
+    {
+        const isGoal=this.props.isGoal;
+        if(isGoal)
+        {
+            return<h1>Goal!!!</h1>;
+        }
+        else
+        {
+            return<h1>Missed Goal!!!</h1>;
+        }
+    }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football isGoal={Math.random()>0.5}/>)
