@@ -450,7 +450,7 @@ r1.render(<MyList/>)*/
 
 //React List using Map with props
 
-function MyList(props)
+/*function MyList(props)
 {
     const items=props.items;
     return(
@@ -465,7 +465,110 @@ function MyList(props)
     )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<MyList items={["item1","item2","item3","item4"]}/>)
+r1.render(<MyList items={["item1","item2","item3","item4"]}/>)*/
+
+//Destructuring
+
+/*function Welcome({name,age})
+{
+    return(
+        <div>
+            <h1>Hello,{name}</h1>
+            <p>Your age is::{age}</p>
+        </div>
+    )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Welcome name="azar" age={20}/>)*/
+
+/*import { Component } from "react";
+class Welcome extends Component
+{
+    render()    
+    {
+        const{name,age}=this.props;
+        return(
+            <div>
+                <h1>Hello,{name}</h1>
+                <p>Your age is::{age}</p>
+            </div>
+        )
+    }   
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Welcome name="azar" age={20}/>)*/
+
+
+//Destructuring in class component with state
+
+/*class Sample extends React.Component
+{   
+    constructor()
+    {
+        super();
+        this.state={name:"azar",age:20};
+    }
+    render()    
+    {
+        const{name,age}=this.state;
+        return(
+            <div>
+                <h1>Hello,{name}</h1>
+                <p>Your age is::{age}</p>
+            </div>
+        )
+    }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)*/
+
+//Destructuring in Array
+
+/*function Skills()
+{
+    const skills=["HTML","CSS","JavaScript","React"];
+    const [skill1,skill2,skill3,skill4]=skills;
+    return(
+        <div>
+            <h1>My Skills</h1>
+            <ul>
+                <li>{skill1}</li>
+                <li>{skill2}</li>
+                <li>{skill3}</li>
+                <li>{skill4}</li>
+            </ul>
+        </div>
+    )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Skills/>)*/
+
+//Class Component Mounting Lifecycle Methods
+
+class MyComponent extends React.Component
+{
+    constructor(props)
+    {
+        super(props);
+        console.log("Constructor called");
+    }
+    componentDidMount()
+    {
+        console.log("Component Did Mount called");
+    }
+    render()
+    {
+        console.log("Render method called");
+        return(
+            <div>
+                <h1>My Component</h1>
+            </div>
+        )
+    }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<MyComponent/>)
+
 
 
 
