@@ -1,4 +1,4 @@
-import React from "react";                                     
+import React, { useState } from "react";                                     
 import ReactDOM from 'react-dom/client';
 
 /*const App=()=>{
@@ -545,7 +545,7 @@ r1.render(<Skills/>)*/
 
 //Class Component Mounting Lifecycle Methods
 
-class MyComponent extends React.Component
+/*class MyComponent extends React.Component
 {
     constructor(props)
     {
@@ -567,8 +567,69 @@ class MyComponent extends React.Component
     }
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<MyComponent/>)
+r1.render(<MyComponent/>)*/
+//class component updating
 
+/*class Counter extends React.Component
+{
+    constructor()
+    {
+        super();
+        this.state={count:0}
+    }
+    componentDidUpdate(preProps,preState)
+    {
+        console.log("ComponentUpdated")
+        console.log("Previous Count::",preState.count)
+        console.log("CurrentCount::",this.state.count)
+    }
+    render()
+    {
+        return(
+            <>
+            <h2>Count:{this.state.count}</h2>
+            <button onClick={()=>{
+                this.setState({count:this.state.count+1})
+            }}>Increment</button>
+             </>
+        )
+    }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)*/
 
+//unmounting-componentWillUnmount
+
+/*class Child extends React.Component
+{
+    componentWillUnmount()
+    {
+        console.log("Welcome")
+    }
+    render()
+    {
+        return(
+            <h3>Child Component</h3>
+        )
+    }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Child/>)*/
+
+//React Hooks useState()
+
+function Counter()
+{
+    const [count,setCount]=useState(0);
+    return(
+        <div>
+            <h1>Count::{count}</h1>
+            <button onClick={()=>setCount(count+1)}>Increment</button>
+            <button onClick={()=>setCount(count-1)}>Decrement</button>
+        </div>
+    )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)
 
 
