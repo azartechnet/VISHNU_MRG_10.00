@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";                                     
+import React, { useEffect, useRef, useState } from "react";                                     
 import ReactDOM from 'react-dom/client';
 
 /*const App=()=>{
@@ -739,7 +739,7 @@ r1.render(<Component1/>)*/
 
 //React using useContext
 
-import { useContext,createContext } from "react";
+/*import { useContext,createContext } from "react";
 
 const UserContext = createContext();
 
@@ -776,5 +776,51 @@ function App() {
 }
 
 const r1 = ReactDOM.createRoot(document.getElementById("root"));
-r1.render(<App />);
+r1.render(<App />);*/
+
+//hooks useRef
+
+/*function FocusInput()
+{
+    const ir=useRef("")
+    const handleFocus=()=>{
+        ir.current.focus();
+    }
+    return(
+        <div>
+            <input type="text" ref={ir}/>
+            <button onClick={handleFocus}>Focus</button>
+        </div>
+    )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<FocusInput/>)*/
+
+//useState Todolist
+
+function Todolist()
+{
+    const [todos,setTodos]=useState(["azar","mohamed","raja"])
+    const addTodo=()=>{
+        setTodos([...todos,"mohan"])
+    }
+    const deleteTodo=(index)=>{
+        setTodos([...todos.slice(0,index),...todos.slice(index+1)])
+    }
+    return(
+        <div>
+            <h1>TodoList</h1>
+            <ul>
+                {todos.map((todo,index)=>
+                    <li>{index}{todo}
+                    <button onClick={()=>deleteTodo(index)}>Delete</button>
+                    </li>
+                )}
+            </ul>
+            <button onClick={addTodo}>AddList</button>
+        </div>
+    )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Todolist/>)
 
