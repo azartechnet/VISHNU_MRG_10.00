@@ -798,7 +798,7 @@ r1.render(<FocusInput/>)*/
 
 //useState Todolist
 
-function Todolist()
+/*function Todolist()
 {
     const [todos,setTodos]=useState(["azar","mohamed","raja"])
     const addTodo=()=>{
@@ -822,5 +822,35 @@ function Todolist()
     )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Todolist/>)
+r1.render(<Todolist/>)*/
 
+//useReducer
+
+import {useReducer} from "react";
+
+//Reducer function
+function reducer(state,action)
+{
+    switch(action.type)
+    {
+        case "add":
+            return state+1;
+        case "sub":
+            return state-1;5
+        default:
+            return state;
+    }
+}
+function Counter()
+{
+    const [count,dispatch]=useReducer(reducer,0)
+    return(
+        <div>
+            <h2>Count::{count}</h2>
+            <button onClick={()=>dispatch({type:"add"})}>Add</button>
+            <button onClick={()=>dispatch({type:"sub"})}>Sub</button>
+        </div>
+    )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)
