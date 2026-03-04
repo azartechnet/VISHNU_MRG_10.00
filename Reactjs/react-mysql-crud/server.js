@@ -38,6 +38,16 @@ app.get("/createtable", (req, res) => {
     })
    
 })
+// Insert post
+app.post('/addpost', (req, res) => {
+    let post = { title: req.body.title, body: req.body.body };
+    let sql = 'INSERT INTO posts SET ?';
+    db.query(sql, post, (err, result) => {
+        if (err) throw err;
+        res.send('Post added...');
+    });
+});
+
 app.listen(port,()=>{
     console.log("Server is Running...")
 })
